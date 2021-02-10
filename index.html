@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+</head>
+<body>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <nav id="navbar">
+        <header>Intro to Godot</header>
+        <ul>
+            <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+            <li><a class="nav-link" href="#Introduction_to_Godot's_editor">Introduction to Godot's editor</a></li>
+            <li><a class="nav-link" href="#Project_manager">Project manager</a></li>
+            <li><a class="nav-link" href="#Your_first_look_at_Godot's_editor">Your first look at Godot's editor</a></li>
+            <li><a class="nav-link" href="#The_workspaces">The workspaces</a></li>
+            <li><a class="nav-link" href="#Modify_the_interface">Modify the interface</a></li>
+            <li><a class="nav-link" href="#Reference">Reference</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <article>
+                <p>
+                    A game engine is a complex tool, and it is therefore difficult to present Godot in a few words. Here's a quick synopsis, which you are free to 
+                    reuse if you need a quick writeup about Godot Engine.
+                </p>
+                <ul>
+                    <li>
+                        Godot Engine is a feature-packed, cross-platform game engine to create 2D and 3D games from a unified interface. It provides a comprehensive 
+                        set of common tools, so users can focus on making games without having to reinvent the wheel. Games can be exported in one click to a number 
+                        of platforms, including the major desktop platforms (Linux, macOS, Windows) as well as mobile (Android, iOS) and web-based (HTML5) platforms.
+                    </li>
+                    <li>
+                        Godot is completely free and open source under the permissive MIT license. No strings attached, no royalties, nothing. Users' games are theirs, 
+                        down to the last line of engine code. Godot's development is fully independent and community-driven, empowering users to help shape their engine 
+                        to match their expectations. It is supported by the <a href="https://sfconservancy.org/">Software Freedom Conservancy</a> not-for-profit.
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Introduction_to_Godot's_editor">
+            <header>Introduction to Godot's editor</header>
+            <article>
+                <p>
+                This tutorial will run you through Godot's interface. We're going to look at the Project Manager, docks, workspaces and everything you need to know to 
+                get started with the engine.
+                </p>
+                <p>
+                You can <a href="https://godotengine.org/download/" target="_blank">download Godot Engine here</a>.
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Project_manager">
+            <header>Project manager</header>
+            <article>
+                <p>
+                    When you launch Godot, the first window you'll see is the Project Manager. Since you have no projects there will be a popup asking if you want to 
+                    open the asset library, just click cancel, we'll look at it later.
+                </p>
+                <img src="https://docs.godotengine.org/en/stable/_images/project_manager_first_open.png" alt="project-manager-1">
+                <p>
+                    Now you should see the project manager. It lets you create, remove, import or play game projects.
+                </p>
+                <img src="https://docs.godotengine.org/en/stable/_images/editor_ui_intro_project_manager_01.png" alt="project-manager-2">
+                <p>
+                    In the top-right corner you'll find a drop-down menu to change the editor's language.
+                </p>
+                <img src="https://docs.godotengine.org/en/stable/_images/editor_ui_intro_project_manager_02.png" alt="project-manager-3">
+                <p>
+                    From the <strong>Templates</strong> tab you can download open source project templates and demos from the Asset Library to help you get started faster. Just select 
+                    the template or demo you want, click download, once it's finished downloading click install and choose where you want the project to go. You can 
+                    learn more about it in <a href="https://docs.godotengine.org/en/stable/tutorials/assetlib/what_is_assetlib.html#doc-what-is-assetlib" target="_blank">About the Asset Library</a>.
+                </p>
+                <img src="https://docs.godotengine.org/en/stable/_images/editor_ui_intro_project_manager_03.png" alt="project-manager-4">
+                <h3>Creat or import a project</h3>
+                <p>
+                    To create a new project, click the <code>New Project</code> button on the right. Here you give it a name, choose an empty folder on your computer to save it to, 
+                    and choose a renderer.
+                </p>
+                <img src="https://docs.godotengine.org/en/stable/_images/editor_ui_intro_project_manager_04.png" alt="project-manager-5">
+                <p>
+                    Click the Browse button to open Godot's file browser and pick a location or type the folder's path in the Project Path field.
+                </p>
+                <img src="https://docs.godotengine.org/en/stable/_images/editor_ui_intro_project_manager_05.png" alt="project-manager-6">
+                <p>
+                    When you see the green tick on the right, it means the engine detects an empty folder. You can also click the <code>Create Folder</code> button next to your project name 
+                    and an empty folder will be created with that name for the project.
+                </p>
+                <p>
+                    Finally, you need to choose which renderer to use (OpenGL ES 3.0 or OpenGL ES 2.0). The advantages and disadvantages of each are listed to help you choose, and you can 
+                    refer to <a href="https://docs.godotengine.org/en/stable/tutorials/misc/gles2_gles3_differences.html#doc-gles2-gles3-differences" target="_blank">Differences between GLES2 and GLES3</a> for more details. Note that you can change the backend from the project settings if you change your mind later on. For this 
+                    tutorial either backend is fine.
+                </p>
+                <p>
+                    Once you are done click <code>Create & Edit</code>. Godot will create the project for you and open it in the editor.
+                </p>
+                <p>
+                    The next time you open the project manager, you'll see your new project in the list. Double click on it to open it in the editor.
+                </p>
+                <img src="https://docs.godotengine.org/en/stable/_images/editor_ui_intro_project_manager_06.png" alt="project-manager-7">
+                <p>
+                    You can import existing projects in a similar way, using the Import button. Locate the folder that contains the project or the <code>project.godot</code> file to import and edit it.
+                </p>
+                <img src="https://docs.godotengine.org/en/stable/_images/editor_ui_intro_project_manager_08.png" alt="project-manager-8">
+                <p>
+                    When the folder path is correct, you'll see a green checkmark. 
+                </p>
+                <img src="https://docs.godotengine.org/en/stable/_images/editor_ui_intro_project_manager_09.png">
+            </article>
+        </section>
+        <section class="main-section" id="Your_first_look_at_Godot's_editor">
+            <header>Your first look at Godot's editor</header>
+            <article>
+                <p>
+                    Welcome to Godot! With your project open, you should see the editor's interface with menus along the top of the interface and docks along the far extremes of the interface on either 
+                    side of the viewport.
+                </p>
+                <img src="https://docs.godotengine.org/en/stable/_images/editor_ui_intro_editor_interface_overview.png" alt="interface-1">
+                <p>
+                    At the top, from left to right, you can see the <strong>main menus</strong>, the <strong>workspaces</strong>, and the <strong>playtest buttons</strong>. 
+                </p>
+                <p>
+                    The <strong>FileSystem dock</strong> is where you'll manage your project files and assets.
+                </p>
+                <img src="https://docs.godotengine.org/en/stable/_images/editor_ui_intro_dock_filesystem.png" alt="interface-2">
+                <p>
+                    The <strong>Scene dock</strong> lists the active scene's content and the <strong>Inspector</strong> allows for the management of the properties of a scene's content.
+                </p>
+                <img src="https://docs.godotengine.org/en/stable/_images/editor_ui_intro_dock_inspector.png" alt="interface-3">
+                <p>
+                    In the center, you have the <strong>Toolbar</strong> at the top, where you'll find tools to move, scale or lock your scene's objects. It changes as you jump to different workspaces.
+                </p>
+                <img src="https://docs.godotengine.org/en/stable/_images/editor_ui_intro_editor_02_toolbar.png" alt="interface-4">
+                <p>
+                    The <strong>Bottom Panel</strong> is the host for the debug console, the animation editor, the audio mixer… They are wide and can take precious space. That's why they're folded by default.
+                </p>
+                <img src="https://docs.godotengine.org/en/stable/_images/editor_ui_intro_editor_03_animation_player.png" alt="interface-5">
+            </article>
+        </section>
+        <section class="main-section" id="The_workspaces">
+            <header>The workspaces</header>
+            <article>
+                <p>
+                    You can see four workspace buttons at the top: 2D, 3D, Script and AssetLib.
+                </p>
+                <p>
+                    You'll use the <strong>2D workspace</strong> for all types of games. In addition to 2D games, the 2D workspace is where you'll build your interfaces. Press <code>F1</code> (or <code>Alt + 1</code> on macOS) to access it.
+                </p>
+                <img src="https://docs.godotengine.org/en/stable/_images/editor_ui_intro_editor_04_2d_workspace.png" alt="workspaces-1">
+                <p>
+                    In the <strong>3D workspace</strong>, you can work with meshes, lights, and design levels for 3D games. Press <code>F2</code> (or <code>Alt + 2</code> on macOS) to access it.
+                </p>
+                <img src="https://docs.godotengine.org/en/stable/_images/editor_ui_intro_editor_05_3d_workspace.png" alt="workspaces-2">
+                <p>
+                    Notice the perspective button under the toolbar, it opens a list of options related to the 3D viewport.
+                </p>
+                <p>
+                    The <strong>Script</strong> workspace is a complete code editor with a debugger, rich auto-completion, and built-in code reference. Press <code>F3</code> (or <code>Alt + 3</code> on macOS) to access it, and <code>Shift + F1</code> to search the reference.
+                </p>
+                <img src="https://docs.godotengine.org/en/stable/_images/editor_ui_intro_editor_06_script_workspace_expanded.png" alt="workspaces-3">
+                <p>
+                    To search for information about a class, method, property, constant, or signal in the engine while you are writing a script, press the "Search Help" button at the top right of the Script workspace.
+                </p>
+                <img src="https://docs.godotengine.org/en/stable/_images/editor_ui_intro_script_search_documentation.png" alt="workspaces-4">
+                <p>
+                    A new window will pop up. Search for the item that you want to find information about.
+                </p>
+                <img src="https://docs.godotengine.org/en/stable/_images/editor_ui_intro_script_search_help_window.png" alt="workspaces-5">
+                <p>
+                    Click on the item you are looking for and press open. The documentation for the item will be displayed in the script workspace.
+                </p>
+                <img src="https://docs.godotengine.org/en/stable/_images/editor_ui_intro_script_class_documentation.png" alt="workspaces-6">
+                <p>
+                    Finally, the <code>AssetLib</code> is a library of free and open source add-ons, scripts and assets to use in your projects.
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Modify_the_interface">
+            <header>Modify the interface</header>
+            <article>
+                <p>
+                    Godot's interface lives in a single window. You cannot split it across multiple screens although you can work with an external code editor like Atom or Visual Studio Code for instance.
+                </p>
+                <h3>Move and resize docks</h3>
+                <p>
+                    Click and drag on the edge of any dock or panel to resize it horizontally or vertically.
+                </p>
+                <img src="https://docs.godotengine.org/en/stable/_images/editor_ui_intro_editor_07.png" alt="modify-interface-1">
+                <p>
+                    Click the three-dotted icon at the top of any dock to change its location.
+                </p>
+                <img src="https://docs.godotengine.org/en/stable/_images/editor_ui_intro_editor_08.png" alt="modify-interface-2">
+                <p>
+                    Go to the <code>Editor</code> menu and <code>Editor Settings</code> to fine-tune the look and feel of the editor.
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Reference">
+            <header>Reference</header>
+            <article>
+                <ul>
+                    <li>
+                        All the documentation in this page is taken from <a href="https://docs.godotengine.org/en/stable/index.html" target="_blank">Godot Docs</a>,
+                    </li>
+                    <li>
+                        used on this web for education purpose to finish freeCodeCamp's Responsive Web Design Certification.
+                    </li>
+                    <li>© Copyright 2014-2020, Juan Linietsky, Ariel Manzur and the Godot community (<a href="https://creativecommons.org/licenses/by/3.0/" 
+                        target="_blank">CC-BY 3.0</a>)
+                    </li>
+                </ul>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
