@@ -1,30 +1,36 @@
 @font-face {
   font-family: 'D-DIN';
-  src: url(../fonts/D-DIN.woff2) format("woff2");
+  src: url(../godotdocs/fonts/D-DIN.woff2) format("woff2");
   font-style: normal;
   font-display: block;
 }
 @font-face {
   font-family: 'D-DIN-Bold';
-  src: url(../fonts/D-DIN-Bold.woff2) format("woff2");
+  src: url(../godotdocsfonts/D-DIN-Bold.woff2) format("woff2");
   font-style: normal;
   font-display: block;
 }
 @font-face {
   font-family: 'D-DINCon';
-  src: url(../fonts/D-DINCondensed.woff2) format("woff2");
+  src: url(../godotdocs/fonts/D-DINCondensed.woff2) format("woff2");
   font-style: normal;
   font-display: block;
 }
 @font-face {
   font-family: 'D-DINCon-Bold';
-  src: url(../fonts/D-DINCondensed-Bold.woff2) format("woff2");
+  src: url(../godotdocs/fonts/D-DINCondensed-Bold.woff2) format("woff2");
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: 'D-DINExp';
+  src: url(../godotdocs/fonts/D-DINExp.woff2) format("Woff2");
   font-style: normal;
   font-display: block;
 }
 @font-face {
   font-family: 'D-DINExp-Bold';
-  src: url(../fonts/D-DINExp-Bold.woff2) format("woff2");
+  src: url(../godotdocs/fonts/D-DINExp-Bold.woff2) format("woff2");
   font-style: normal;
   font-display: block;
 }
@@ -48,11 +54,23 @@ body {
   background-color: #120c24;
 }
 
+#navbar > header {
+  margin-top: 20px;
+  font-family: 'D-DINExp-Bold';
+  text-transform: uppercase;
+  color: #6544e9;
+}
+
+a {
+  text-decoration: none;
+  color: #8068e2;
+}
+
 header {
   margin: 10px;
   text-align: center;
   font-size: 1.8em;
-  font-weight: thin;
+  font-family: 'D-DINExp-Bold';
 }
 
 #main-doc header {
@@ -89,41 +107,53 @@ header {
 }
 #main-doc {
   position: absolute;
-  margin-left: 310px;
+  margin-left: 320px;
   padding: 20px;
   margin-bottom: 110px;
+  font-family: 'D-DIN';
+  font-weight: 100;
 }
 img {
   width: 100%;
   max-width: 500px;
   height: auto;
 }
+section {
+  margin-bottom: 70px;
+}
 section article {
   color: #ffffff;
-  margin: 15px;
-  font-size: 0.96em;
+  margin: 0px;
+  font-size: 1em;
 }
 
 section li {
-  margin: 15px 0px 0px 20px;
+  margin: 10px 0px 0px 0px;
+  list-style: none;
+}
+
+#Reference li {
+  margin-top: 0;
 }
 
 code {
+  display: inline-block;
   text-align: left;
   white-space: pre-line;
   position: relative;
   word-break: normal;
   word-wrap: normal;
-  background-color: #18112c;
-  padding: 5px;
-  margin: 10px;
+  background-color: #6544e9;
+  padding: 3px;
+  margin: 3px;
   border-radius: 5px;
 }
 
 @media only screen and (max-width: 815px) {
   /* For mobile phones: */
   #navbar ul {
-    border: none;
+    border: 1px solid;
+    border-color: #6544e9;
     height: 207px;
   }
 
@@ -137,27 +167,18 @@ code {
     max-height: 275px;
     border: none;
     z-index: 1;
-    border-bottom: 2px solid;
+    border-bottom: none;
   }
 
+  #navbar li {}
   #main-doc {
     position: relative;
     margin-left: 0px;
     margin-top: 270px;
   }
 }
-
 @media only screen and (max-width: 400px) {
   #main-doc {
     margin-left: -10px;
-  }
-
-  code {
-    margin-left: -20px;
-    width: 100%;
-    padding: 15px;
-    padding-left: 10px;
-    padding-right: 45px;
-    min-width: 233px;
   }
 }
