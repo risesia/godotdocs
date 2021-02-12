@@ -6,7 +6,7 @@
 }
 @font-face {
   font-family: 'D-DIN-Bold';
-  src: url(../godotdocsfonts/D-DIN-Bold.woff2) format("woff2");
+  src: url(../godotdocs/fonts/D-DIN-Bold.woff2) format("woff2");
   font-style: normal;
   font-display: block;
 }
